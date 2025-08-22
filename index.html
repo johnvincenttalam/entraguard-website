@@ -618,7 +618,7 @@
       left: 50%;
       width: 100%;
       height: 100%;
-      background-image: url('shield.png');
+      background-image: url('images/shield.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -1994,7 +1994,7 @@
           #2563eb 50%,
           #3b82f6 100%);
       background: linear-gradient(135deg, var(--royal-blue), var(--ocean-blue));
-      padding: 80px 60px 0;
+      padding: 40px 60px 0;
       border-radius: 32px;
       margin: 120px 0;
       position: relative;
@@ -2002,7 +2002,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
-      align-items: center;
+      align-items: end;
     }
 
     .cta-section::before {
@@ -3024,6 +3024,8 @@
       transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       border-left: 1px solid rgba(255, 255, 255, 0.3);
       overflow-y: auto;
+      display: flex;
+      flex-direction: column;
     }
 
     @media (max-width: 480px) {
@@ -3042,9 +3044,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       padding-bottom: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      flex-shrink: 0;
     }
 
     .mobile-sidebar-logo {
@@ -3083,9 +3086,16 @@
       transform: rotate(90deg);
     }
 
+    .mobile-sidebar-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     .mobile-nav-links {
       list-style: none;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      flex: 1;
     }
 
     .mobile-nav-links li {
@@ -3144,6 +3154,8 @@
       display: block;
       transition: all 0.3s ease;
       box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+      margin-top: auto;
+      flex-shrink: 0;
     }
 
     .mobile-cta-btn:hover {
@@ -3522,7 +3534,7 @@
   <nav role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#" class="logo" aria-label="EntraGuard home">
-        <img src="logo.png" alt="EntraGuard Logo" />
+        <img src="images/logo.png" alt="EntraGuard Logo" />
       </a>
       <ul class="nav-links" role="menubar" aria-label="Main menu">
         <li role="none"><a href="#features" role="menuitem">Features</a></li>
@@ -3545,24 +3557,26 @@
     aria-hidden="true">
     <div class="mobile-sidebar-header">
       <a href="#" class="mobile-sidebar-logo" aria-label="EntraGuard home">
-        <img src="logo.png" alt="EntraGuard Logo" />
+        <img src="images/logo.png" alt="EntraGuard Logo" />
       </a>
       <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close mobile menu">
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
     </div>
 
-    <nav role="navigation" aria-label="Mobile navigation">
-      <ul class="mobile-nav-links" role="menu">
-        <li role="none"><a href="#features" class="mobile-nav-link" role="menuitem">Features</a></li>
-        <li role="none"><a href="#modules" class="mobile-nav-link" role="menuitem">Modules</a></li>
-        <li role="none"><a href="#benefits" class="mobile-nav-link" role="menuitem">Benefits</a></li>
-        <li role="none"><a href="#testimonials" class="mobile-nav-link" role="menuitem">Reviews</a></li>
-        <li role="none"><a href="#contact" class="mobile-nav-link" role="menuitem">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="mobile-sidebar-content">
+      <nav role="navigation" aria-label="Mobile navigation">
+        <ul class="mobile-nav-links" role="menu">
+          <li role="none"><a href="#features" class="mobile-nav-link" role="menuitem">Features</a></li>
+          <li role="none"><a href="#modules" class="mobile-nav-link" role="menuitem">Modules</a></li>
+          <li role="none"><a href="#benefits" class="mobile-nav-link" role="menuitem">Benefits</a></li>
+          <li role="none"><a href="#testimonials" class="mobile-nav-link" role="menuitem">Reviews</a></li>
+          <li role="none"><a href="#contact" class="mobile-nav-link" role="menuitem">Contact</a></li>
+        </ul>
+      </nav>
 
-    <a href="#contact" class="mobile-cta-btn" aria-label="Get started with EntraGuard">Get Started</a>
+      <a href="#contact" class="mobile-cta-btn" aria-label="Get started with EntraGuard">Get Started</a>
+    </div>
   </div>
 
   <!-- Hero Section -->
@@ -3627,7 +3641,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="model-1.png" alt="EntraGuard Security Professional" />
+            <img src="images/model-1.png" alt="EntraGuard Security Professional" />
           </div>
         </div>
       </div>
@@ -4314,7 +4328,7 @@
             <a href="#" class="cta-btn">Start Free Trial</a>
           </div>
           <div class="cta-image">
-            <img src="model-2.png" alt="Excited student celebrating success" />
+            <img src="images/model-2.png" alt="Excited student celebrating success" />
           </div>
         </div>
       </div>
@@ -4390,7 +4404,7 @@
           Powered by
         </p>
         <a href="https://www.ragph.com/" style="text-decoration: none">
-          <img src="rag.png" alt="RAG Logo" style="height: 40px; vertical-align: middle; margin-left: 4px" />
+          <img src="images/rag.png" alt="RAG Logo" style="height: 40px; vertical-align: middle; margin-left: 4px" />
         </a>
       </div>
     </div>
